@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-navy: #142B45;
+    --color-primary: #2563EB;
+    --color-bg: #F5F7FA;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-navy);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* FullCalendar Modern SaaS Theme Customizations */
+.fc {
+  font-family: inherit;
+  --fc-border-color: #E2E8F0;
+  --fc-today-bg-color: #EFF6FF;
+  --fc-event-border-color: transparent;
+  --fc-neutral-bg-color: #F8FAFC;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #142B45;
+}
+
+.fc .fc-button {
+  background-color: #FFFFFF !important;
+  color: #1E293B !important;
+  border-color: #CBD5E1 !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  border-radius: 0.5rem !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  text-transform: capitalize;
+  padding: 0.35rem 0.65rem !important;
+}
+
+.fc .fc-button:hover {
+  background-color: #F1F5F9 !important;
+  border-color: #94A3B8 !important;
+}
+
+.fc .fc-button-active,
+.fc .fc-button-primary:not(:disabled).fc-button-active {
+  background-color: #2563EB !important;
+  color: #FFFFFF !important;
+  border-color: #2563EB !important;
+}
+
+.fc-timegrid-slot {
+  height: 2.5rem !important;
+}
+
+.fc-event {
+  border-radius: 0.375rem;
+  padding: 2px 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Respect Prefers Reduced Motion (WCAG 2.2 AA) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
